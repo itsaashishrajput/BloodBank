@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white_light"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/red_action"
+        app:menu="@menu/search_menu"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/linearLayout"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/choose_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="Choose Location"
+            android:layout_margin="5dp"
+            android:textStyle="italic"
+            android:textSize="30sp"
+            android:textColor="@color/red_light"
+            android:drawableTint="@color/red_light"
+            android:drawableEnd="@drawable/ic_baseline_location_on_24"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        android:layout_above="@id/make_request"
+        android:layout_below="@id/linearLayout"/>
+    <TextView
+        android:id="@+id/make_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make Request"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@color/red_action"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
