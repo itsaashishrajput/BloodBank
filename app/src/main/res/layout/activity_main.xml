@@ -35,7 +35,7 @@
             android:textSize="30sp"
             android:textColor="@color/red_light"
             android:drawableTint="@color/red_light"
-            android:drawableEnd="@drawable/ic_baseline_location_on_24"
+            android:drawableEnd="@drawable/ic_location_on_24"
             android:layout_centerHorizontal="true"/>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
